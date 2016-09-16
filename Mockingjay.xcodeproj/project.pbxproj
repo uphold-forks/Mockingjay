@@ -19,6 +19,7 @@
 		2746CDCB1A702F7800719B66 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2746CDBF1A702F7800719B66 /* Mockingjay.framework */; };
 		2746CDD21A702F7800719B66 /* MockingjayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746CDD11A702F7800719B66 /* MockingjayTests.swift */; };
 		A1E3C5701AA4EA130069C998 /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743679B1AA28D4D0030C97B /* XCTest.swift */; };
+		BCAD5A8F1D8C075E00066FE8 /* MockingjayURLConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAD5A8E1D8C075E00066FE8 /* MockingjayURLConfiguration.m */; };
 		BCDE72391BFE1843001E5CFF /* URITemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDE72381BFE1843001E5CFF /* URITemplate.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		2746CDDC1A702FC100719B66 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
 		2746CDDD1A702FC100719B66 /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
 		2746CDDE1A702FC100719B66 /* UniversalFramework_Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Test.xcconfig; sourceTree = "<group>"; };
+		BCAD5A8E1D8C075E00066FE8 /* MockingjayURLConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockingjayURLConfiguration.m; sourceTree = "<group>"; };
 		BCDE72381BFE1843001E5CFF /* URITemplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URITemplate.framework; path = Carthage/Build/iOS/URITemplate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +106,9 @@
 				274367971AA28AFC0030C97B /* Matchers.swift */,
 				274367AF1AA29E510030C97B /* Builders.swift */,
 				274367931AA27AAD0030C97B /* MockingjayProtocol.swift */,
-				2743679B1AA28D4D0030C97B /* XCTest.swift */,
+				BCAD5A8E1D8C075E00066FE8 /* MockingjayURLConfiguration.m */,
 				274367C51AA35FD00030C97B /* NSURLSessionConfiguration.swift */,
+				2743679B1AA28D4D0030C97B /* XCTest.swift */,
 				2746CDC21A702F7800719B66 /* Supporting Files */,
 			);
 			path = Mockingjay;
@@ -216,14 +219,16 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Cocode;
 				TargetAttributes = {
 					2746CDBE1A702F7800719B66 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
 					};
 					2746CDC91A702F7800719B66 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				274367981AA28AFC0030C97B /* Matchers.swift in Sources */,
+				BCAD5A8F1D8C075E00066FE8 /* MockingjayURLConfiguration.m in Sources */,
 				274367921AA27A7C0030C97B /* Mockingjay.swift in Sources */,
 				A1E3C5701AA4EA130069C998 /* XCTest.swift in Sources */,
 				274367C61AA35FD00030C97B /* NSURLSessionConfiguration.swift in Sources */,
@@ -328,8 +334,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -338,6 +346,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -373,8 +382,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -383,6 +394,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -392,6 +404,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -422,6 +435,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -450,6 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -467,6 +482,7 @@
 				INFOPLIST_FILE = MockingjayTests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -479,6 +495,7 @@
 				INFOPLIST_FILE = MockingjayTests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

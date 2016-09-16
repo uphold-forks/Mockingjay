@@ -9,20 +9,20 @@
 import Foundation
 
 public enum Response : Equatable {
-  case Success(NSURLResponse, NSData?)
-  case Failure(NSError)
+  case success(URLResponse, Data?)
+  case failure(Error)
 }
 
 public func ==(lhs:Response, rhs:Response) -> Bool {
   switch (lhs, rhs) {
-  case let (.Failure(lhsError), .Failure(rhsError)):
-    return lhsError == rhsError
-  case let (.Success(lhsResponse, lhsData), .Success(rhsResponse, rhsData)):
+  case let (.failure(lhsError), .failure(rhsError)):
+    return lhsError._domain == rhsError._domain
+  case let (.success(lhsResponse, lhsData), .success(rhsResponse, rhsData)):
     return lhsResponse == rhsResponse && lhsData == rhsData
   default:
     return false
   }
 }
 
-public typealias Matcher = (NSURLRequest) -> (Bool)
-public typealias Builder = (NSURLRequest) -> (Response)
+public typealias Matcher = (URLRequest) -> (Bool)
+public typealias Builder = (URLRequest) -> (Response)

@@ -13,55 +13,55 @@ import Mockingjay
 
 class EverythingMatcherTests : XCTestCase {
   func testEverythingMatcher() {
-    let request = NSURLRequest()
-    XCTAssertTrue(everything(request))
+    let request = URLRequest(url: URL(string: "https://api.palaverapp.com/")!)
+    XCTAssertTrue(everything(request: request))
   }
 }
 
 class URIMatcherTests : XCTestCase {
   func testExactFullURIMatches() {
-    let request = NSURLRequest(URL: NSURL(string: "https://api.palaverapp.com/")!)
-    XCTAssertTrue(uri("https://api.palaverapp.com/")(request:request))
+    let request = URLRequest(url: URL(string: "https://api.palaverapp.com/")!)
+    XCTAssertTrue(uri(uri: "https://api.palaverapp.com/")(request))
   }
 
   func testExactFullPathMatches() {
-    let request = NSURLRequest(URL: NSURL(string: "https://api.palaverapp.com/devices")!)
-    XCTAssertTrue(uri("/devices")(request:request))
+    let request = URLRequest(url: URL(string: "https://api.palaverapp.com/devices")!)
+    XCTAssertTrue(uri(uri: "/devices")(request))
   }
 
   func testExactFullURIMismatch() {
-    let request = NSURLRequest(URL: NSURL(string: "https://api.palaverapp.com/devices")!)
-    XCTAssertFalse(uri("https://api.palaverapp.com/notifications")(request:request))
+    let request = URLRequest(url: URL(string: "https://api.palaverapp.com/devices")!)
+    XCTAssertFalse(uri(uri: "https://api.palaverapp.com/notifications")(request))
   }
 
   func testExactFullPathMismatch() {
-    let request = NSURLRequest(URL: NSURL(string: "https://api.palaverapp.com/devices")!)
-    XCTAssertFalse(uri("/notifications")(request:request))
+    let request = URLRequest(url: URL(string: "https://api.palaverapp.com/devices")!)
+    XCTAssertFalse(uri(uri: "/notifications")(request))
   }
 
   func testVariableFullURIMatch() {
-    let request = NSURLRequest(URL: NSURL(string: "https://github.com/kylef/URITemplate")!)
-    XCTAssertTrue(uri("https://github.com/{username}/URITemplate")(request:request))
+    let request = URLRequest(url: URL(string: "https://github.com/kylef/URITemplate")!)
+    XCTAssertTrue(uri(uri: "https://github.com/{username}/URITemplate")(request))
   }
 
   func testVariablePathMatch() {
-    let request = NSURLRequest(URL: NSURL(string: "https://github.com/kylef/URITemplate")!)
-    XCTAssertTrue(uri("/{username}/URITemplate")(request:request))
+    let request = URLRequest(url: URL(string: "https://github.com/kylef/URITemplate")!)
+    XCTAssertTrue(uri(uri: "/{username}/URITemplate")(request))
   }
 }
 
 class HTTPMatcherTests : XCTestCase {
   func testMethodURIMatch() {
-    let request = NSMutableURLRequest(URL: NSURL(string: "https://api.palaverapp.com/")!)
-    request.HTTPMethod = "PATCH"
+    var request = URLRequest(url: URL(string: "https://api.palaverapp.com/")!)
+    request.httpMethod = "PATCH"
 
-    XCTAssertTrue(http(.PATCH, uri: "https://api.palaverapp.com/")(request:request))
+    XCTAssertTrue(http(method: .PATCH, uri: "https://api.palaverapp.com/")(request))
   }
 
   func testMethodMismatch() {
-    let request = NSMutableURLRequest(URL: NSURL(string: "https://api.palaverapp.com/")!)
-    request.HTTPMethod = "GET"
+    var request = URLRequest(url: URL(string: "https://api.palaverapp.com/")!)
+    request.httpMethod = "GET"
 
-    XCTAssertFalse(http(.PATCH, uri: "https://api.palaverapp.com/")(request:request))
+    XCTAssertFalse(http(method: .PATCH, uri: "https://api.palaverapp.com/")(request))
   }
 }
