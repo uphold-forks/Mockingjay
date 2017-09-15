@@ -24,37 +24,10 @@
 		444EA6091C5261DE000C3A9F /* MockingjayAsyncProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444EA6081C5261DE000C3A9F /* MockingjayAsyncProtocolTests.swift */; };
 		444EA60C1C52666D000C3A9F /* TestAudio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 444EA60B1C52666D000C3A9F /* TestAudio.m4a */; };
 		A1E3C5701AA4EA130069C998 /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743679B1AA28D4D0030C97B /* XCTest.swift */; };
+		BCDE72391BFE1843001E5CFF /* URITemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDE72381BFE1843001E5CFF /* URITemplate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2715FAC41D8C818C00A89DF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2715FABD1D8C818C00A89DF7 /* URITemplate.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "_____Product_Spectre";
-			remoteInfo = Spectre;
-		};
-		2715FAC61D8C818C00A89DF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2715FABD1D8C818C00A89DF7 /* URITemplate.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "_____Product_PathKit";
-			remoteInfo = PathKit;
-		};
-		2715FAC81D8C818C00A89DF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2715FABD1D8C818C00A89DF7 /* URITemplate.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "_____Product_URITemplate";
-			remoteInfo = URITemplate;
-		};
-		2715FACA1D8C818C00A89DF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2715FABD1D8C818C00A89DF7 /* URITemplate.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "_____Product_URITemplateTests";
-			remoteInfo = URITemplateTests;
-		};
 		2746CDCC1A702F7800719B66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2746CDB61A702F7800719B66 /* Project object */;
@@ -85,9 +58,7 @@
 		2746CDDC1A702FC100719B66 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
 		2746CDDD1A702FC100719B66 /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
 		2746CDDE1A702FC100719B66 /* UniversalFramework_Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Test.xcconfig; sourceTree = "<group>"; };
-		27703A621CE2560600194732 /* MockingjayURLSessionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockingjayURLSessionConfiguration.m; sourceTree = "<group>"; };
-		444EA6081C5261DE000C3A9F /* MockingjayAsyncProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockingjayAsyncProtocolTests.swift; sourceTree = "<group>"; };
-		444EA60B1C52666D000C3A9F /* TestAudio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestAudio.m4a; sourceTree = "<group>"; };
+		BCDE72381BFE1843001E5CFF /* URITemplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URITemplate.framework; path = Carthage/Build/iOS/URITemplate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2715FACF1D8C81AB00A89DF7 /* URITemplate.framework in Frameworks */,
+				BCDE72391BFE1843001E5CFF /* URITemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +95,7 @@
 		2746CDB51A702F7800719B66 = {
 			isa = PBXGroup;
 			children = (
-				2715FABD1D8C818C00A89DF7 /* URITemplate.xcodeproj */,
+				BCDE72361BFE17EB001E5CFF /* Frameworks */,
 				2746CDDB1A702FC100719B66 /* Configurations */,
 				2746CDC11A702F7800719B66 /* Mockingjay */,
 				2746CDCE1A702F7800719B66 /* MockingjayTests */,
@@ -202,12 +173,12 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
-		444EA60D1C526673000C3A9F /* Resources */ = {
+		BCDE72361BFE17EB001E5CFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				444EA60B1C52666D000C3A9F /* TestAudio.m4a */,
+				BCDE72381BFE1843001E5CFF /* URITemplate.framework */,
 			);
-			name = Resources;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +203,7 @@
 				2746CDBB1A702F7800719B66 /* Frameworks */,
 				2746CDBC1A702F7800719B66 /* Headers */,
 				2746CDBD1A702F7800719B66 /* Resources */,
+				BCDE72371BFE17FD001E5CFF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -291,12 +263,6 @@
 			mainGroup = 2746CDB51A702F7800719B66;
 			productRefGroup = 2746CDC01A702F7800719B66 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 2715FABE1D8C818C00A89DF7 /* Products */;
-					ProjectRef = 2715FABD1D8C818C00A89DF7 /* URITemplate.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2746CDBE1A702F7800719B66 /* Mockingjay */,
@@ -304,37 +270,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		2715FAC51D8C818C00A89DF7 /* Spectre.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Spectre.framework;
-			remoteRef = 2715FAC41D8C818C00A89DF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2715FAC71D8C818C00A89DF7 /* PathKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PathKit.framework;
-			remoteRef = 2715FAC61D8C818C00A89DF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2715FAC91D8C818C00A89DF7 /* URITemplate.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = URITemplate.framework;
-			remoteRef = 2715FAC81D8C818C00A89DF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2715FACB1D8C818C00A89DF7 /* URITemplateTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = file;
-			path = URITemplateTests.xctest;
-			remoteRef = 2715FACA1D8C818C00A89DF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2746CDBD1A702F7800719B66 /* Resources */ = {
@@ -353,6 +288,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCDE72371BFE17FD001E5CFF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/URITemplate.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2746CDBA1A702F7800719B66 /* Sources */ = {
@@ -510,6 +462,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Sources/Mockingjay/Info.plist;
@@ -540,6 +493,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Sources/Mockingjay/Info.plist;
